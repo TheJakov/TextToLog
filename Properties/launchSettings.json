@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TextToLog": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:/Jakov/file.txt\""
+    }
+  }
+}
