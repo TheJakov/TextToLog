@@ -8,7 +8,7 @@ if (!File.Exists(filePath)) return;
 byte[] bytes = File.ReadAllBytes(filePath);
 
 string directoryPath = Path.GetDirectoryName(filePath);
-string fileName = Path.GetFileName(filePath);
-string newPath = Path.Join(directoryPath, fileName.Split('.').First()) + ".log";
+string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(filePath);
+string newPath = Path.Combine(directoryPath, fileNameWithoutExtension) + ".log";
 
 File.WriteAllBytes(newPath, bytes);
